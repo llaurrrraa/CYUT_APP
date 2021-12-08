@@ -1,0 +1,513 @@
+* {
+  font-family: "Noto Sans TC", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+html,
+body {
+  width: 100%;
+  height: 4000px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.mybody {
+  background-color: #3756e4;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mybody .landing {
+  background-color: #f0f0f3;
+  width: 90%;
+  height: 85%;
+  border-radius: 30px;
+}
+
+.mybody .landing .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+.mybody .landing .nav .navLine {
+  margin-top: 20px;
+  background-color: #3756e4;
+  height: 1px;
+  border: none;
+}
+
+.mybody .landing .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 10px 80px 0 0;
+}
+
+.mybody .landing .nav li {
+  letter-spacing: 3px;
+  margin: 0 8px;
+  padding: 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.mybody .landing .nav a {
+  color: #3756e4;
+  margin-right: 20px;
+}
+
+.mybody .landing .nav a:hover {
+  color: #f16f6f;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.mybody .landing .main {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mybody .landing .main .titleName {
+  width: 50%;
+  margin-top: 90px;
+  margin-left: 130px;
+  font-size: 3rem;
+  font-weight: 100;
+  letter-spacing: 3px;
+  line-height: 1.8em;
+  position: relative;
+}
+
+.mybody .landing .main .titleName .content {
+  display: block;
+  font-size: 0.8rem;
+  padding: 10px 0;
+  letter-spacing: 2px;
+  color: #3756e4;
+  font-weight: 700;
+}
+
+.mybody .landing .main .photo {
+  position: relative;
+}
+
+.mybody .landing .main .photo .imgOne img {
+  position: absolute;
+  width: 18vw;
+  margin-top: 80px;
+  margin-left: 180px;
+}
+
+.mybody .landing .main .photo .imgTwo img {
+  position: absolute;
+  width: 24vw;
+  margin-top: 130px;
+  margin-left: -30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.mybody .landing .main .photo .imgTwo:hover img {
+  -webkit-transform: skew(-10deg, 5deg);
+          transform: skew(-10deg, 5deg);
+  -webkit-transform: scaleY(1.1);
+          transform: scaleY(1.1);
+}
+
+.mymain {
+  padding-top: 1.5rem;
+  width: 100%;
+  height: 100%;
+  background-color: #3756e4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mymain .begin {
+  width: 100%;
+  height: 100%;
+}
+
+.mymain .begin .motivation {
+  width: 100%;
+  height: 30vh;
+}
+
+.mymain .begin .motivation .smtitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.3);
+  margin-left: 4.5rem;
+}
+
+.mymain .begin .motivation .mTitle1 {
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  display: inline;
+  margin-left: 3rem;
+  background-color: black;
+  border: solid 0.5px white;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 6px 25px;
+  z-index: 100;
+  position: relative;
+}
+
+.mymain .begin .motivation .mTitle2 {
+  display: inline;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  display: inline;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: solid 0.5px white;
+  color: #3dfff3;
+  border-radius: 20px;
+  padding: 6px 40px 6px 50px;
+  margin-left: -30px;
+  z-index: -1;
+}
+
+.mymain .begin .motivation .moLine {
+  position: absolute;
+  background-color: #ffffff;
+  height: 1px;
+  border: none;
+  margin-left: 35rem;
+  margin-top: -10px;
+  z-index: 200;
+}
+
+.mymain .begin .motivation .mtxt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 80px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.mymain .begin .motivation .mtxt ol {
+  display: inline;
+  padding: 0px;
+  margin: 0 30px 0 30px;
+}
+
+.mymain .begin .motivation .mtxt ol li {
+  display: inline;
+  padding: 18px 20px;
+  margin: 0 10px;
+  border-radius: 10px;
+  background-color: #f16f6f;
+  font-weight: 400;
+}
+
+.mymain .begin .motivation .mtxt ol li:hover {
+  font-weight: 700;
+  color: white;
+  background-color: #ff7777;
+  -webkit-box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.mymain .begin .before {
+  height: 19%;
+}
+
+.mymain .begin .before .smtitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.3);
+  margin-left: 4.5rem;
+}
+
+.mymain .begin .before .bTitle1 {
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  display: inline;
+  margin-left: 3rem;
+  background-color: black;
+  border: solid 0.5px white;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 6px 25px;
+  z-index: 100;
+  position: relative;
+}
+
+.mymain .begin .before .bTitle2 {
+  display: inline;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  display: inline;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: solid 0.5px white;
+  color: #3dfff3;
+  border-radius: 20px;
+  padding: 6px 40px 6px 50px;
+  margin-left: -30px;
+  z-index: -1;
+}
+
+.mymain .begin .before .beforeLine {
+  background-color: #ffffff;
+  height: 1px;
+  border: none;
+  position: absolute;
+  margin-left: 51rem;
+  margin-top: -10px;
+  z-index: 200;
+}
+
+.mymain .begin .before .beforeBgimg {
+  height: 100%;
+}
+
+.mymain .begin .before .beforeBgimg .folderImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 88vw;
+  margin: 40px auto;
+  position: relative;
+}
+
+.mymain .begin .before .beforeBgimg .oddAppImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-580px);
+          transform: translateY(-580px);
+  width: 80vw;
+  margin: 0px auto;
+}
+
+.mymain .UXresearch .persona .smtitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.3);
+  margin-left: 4.5rem;
+}
+
+.mymain .UXresearch .persona .perTitle1 {
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  display: inline;
+  margin-left: 3rem;
+  background-color: #e5e5e5;
+  border: solid 0.5px white;
+  color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 6px 25px;
+  z-index: 100;
+  position: relative;
+}
+
+.mymain .UXresearch .persona .perTitle2 {
+  display: inline;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  display: inline;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: solid 0.5px white;
+  color: #3dfff3;
+  border-radius: 20px;
+  padding: 6px 40px 6px 50px;
+  margin-left: -30px;
+  z-index: -1;
+}
+
+.mymain .UXresearch .persona .perLine {
+  background-color: #ffffff;
+  height: 1px;
+  border: none;
+  position: absolute;
+  margin-left: 41rem;
+  margin-top: -10px;
+  z-index: 200;
+}
+
+.mymain .UXresearch .persona .uxtxt {
+  margin-left: 18rem;
+  margin-top: 1.8rem;
+  line-height: 2rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.mymain .UXresearch .persona .uxImg .uxImgOne {
+  width: 80vw;
+  margin: 20px auto;
+  margin-right: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mymain .UXresearch .persona .uxImg .uxImgTwo {
+  width: 75vw;
+  margin: 20px auto;
+  margin-right: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mymain .UXresearch .journeyMap .smtitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.3);
+  margin-left: 4.5rem;
+}
+
+.mymain .UXresearch .journeyMap .jourTitle1 {
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  display: inline;
+  margin-left: 3rem;
+  background-color: #e5e5e5;
+  border: solid 0.5px white;
+  color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 6px 25px;
+  z-index: 100;
+  position: relative;
+}
+
+.mymain .UXresearch .journeyMap .jourTitle2 {
+  display: inline;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  display: inline;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: solid 0.5px white;
+  color: #3dfff3;
+  border-radius: 20px;
+  padding: 6px 40px 6px 50px;
+  margin-left: -30px;
+  z-index: -1;
+}
+
+.mymain .UXresearch .journeyMap .jourLine {
+  background-color: #ffffff;
+  height: 1px;
+  border: none;
+  position: absolute;
+  margin-left: 48rem;
+  margin-top: -10px;
+  z-index: 200;
+}
+
+.mymain .UXresearch .journeyMap .jourtxtOne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 80px;
+  margin-left: 18rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.mymain .UXresearch .journeyMap .jourtxtOne ul {
+  display: inline;
+  text-decoration: none;
+}
+
+.mymain .UXresearch .journeyMap .jourtxtOne ul li {
+  display: inline;
+}
+
+.mymain .UXresearch .journeyMap .jourtxtTwo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 80px;
+  margin-left: 18rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.mymain .UXresearch .journeyMap .jourtxtTwo ul {
+  display: inline;
+  text-decoration: none;
+}
+
+.mymain .UXresearch .journeyMap .jourtxtTwo ul li {
+  display: inline;
+}
+/*# sourceMappingURL=style.css.map */

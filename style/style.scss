@@ -1,0 +1,374 @@
+$colorBlue: #3756e4;
+$colorGray: #f0f0f3;
+$colorSalmon: #f16f6f;
+$colorWhite: #ffffff;
+$colorLightBlue: #3dfff3;
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin smtitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgba($colorWhite, 0.3);
+  margin-left: 4.5rem;
+}
+
+@mixin hr($color) {
+  background-color: $color;
+  height: 1px;
+  border: none;
+}
+
+@mixin titleBlackBg {
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  display: inline;
+  margin-left: 3rem;
+  background-color: rgba(0, 0, 0, 1);
+  border: solid 0.5px white;
+  color: $colorWhite;
+  border-radius: 20px;
+  padding: 6px 25px;
+  z-index: 100;
+  position: relative;
+}
+
+@mixin titleGrayBg {
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  display: inline;
+  margin-left: 3rem;
+  background-color: #e5e5e5;
+  border: solid 0.5px white;
+  color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 6px 25px;
+  z-index: 100;
+  position: relative;
+}
+
+@mixin titleWhiteBg {
+  display: inline;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  display: inline;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: solid 0.5px white;
+  color: $colorLightBlue;
+  border-radius: 20px;
+  padding: 6px 40px 6px 50px;
+  margin-left: -30px;
+  z-index: -1;
+}
+
+* {
+  //   border: solid 1px black;
+  font-family: "Noto Sans TC", sans-serif;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: initial;
+}
+html,
+body {
+  width: 100%;
+  height: 4000px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  //   @include flexCenter();
+}
+
+.mybody {
+  background-color: $colorBlue;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  // padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   @include flexCenter();
+
+  .landing {
+    background-color: $colorGray;
+    width: 90%;
+    height: 85%;
+    border-radius: 30px;
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      .navLine {
+        margin-top: 20px;
+        background-color: $colorBlue;
+        height: 1px;
+        border: none;
+      }
+      ul {
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 10px 80px 0 0;
+      }
+      li {
+        letter-spacing: 3px;
+        margin: 0 8px;
+        padding: 0 10px;
+        font-size: 15px;
+        font-weight: 700;
+      }
+      a {
+        color: $colorBlue;
+        margin-right: 20px;
+      }
+      a:hover {
+        color: $colorSalmon;
+        background: rgba(255, 255, 255, 0.9);
+        transition: 0.2s;
+      }
+    }
+    .main {
+      width: 80%;
+      display: flex;
+      .titleName {
+        width: 50%;
+        margin-top: 90px;
+        margin-left: 130px;
+        font-size: 3rem;
+        font-weight: 100;
+        letter-spacing: 3px;
+        line-height: 1.8em;
+        position: relative;
+        .content {
+          display: block;
+          font-size: 0.8rem;
+          padding: 10px 0;
+          letter-spacing: 2px;
+          color: $colorBlue;
+          font-weight: 700;
+        }
+      }
+
+      .photo {
+        position: relative;
+        .imgOne {
+          img {
+            position: absolute;
+            width: 18vw;
+            margin-top: 80px;
+            margin-left: 180px;
+          }
+        }
+        .imgTwo {
+          img {
+            position: absolute;
+            width: 24vw;
+            margin-top: 130px;
+            margin-left: -30px;
+            transition: 0.5s;
+          }
+        }
+        .imgTwo:hover {
+          img {
+            transform: skew(-10deg, 5deg);
+            transform: scaleY(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+.mymain {
+  padding-top: 1.5rem;
+  width: 100%;
+  height: 100%;
+  background-color: $colorBlue;
+  display: flex;
+  flex-wrap: wrap;
+  .begin {
+    width: 100%;
+    height: 100%;
+    .motivation {
+      width: 100%;
+      height: 30vh;
+      .smtitle {
+        @include smtitle();
+      }
+      .mTitle1 {
+        @include titleBlackBg();
+      }
+      .mTitle2 {
+        @include titleWhiteBg();
+      }
+      .moLine {
+        position: absolute;
+        @include hr($colorWhite);
+        margin-left: 35rem;
+        margin-top: -10px;
+        z-index: 200;
+      }
+      .mtxt {
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+        color: $colorWhite;
+        letter-spacing: 1px;
+        ol {
+          display: inline;
+          padding: 0px;
+          margin: 0 30px 0 30px;
+          li {
+            display: inline;
+            padding: 18px 20px;
+            margin: 0 10px;
+            border-radius: 10px;
+            background-color: $colorSalmon;
+            font-weight: 400;
+          }
+          li:hover {
+            font-weight: 700;
+            color: white;
+            background-color: #ff7777;
+            box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.2);
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+    .before {
+      height: 19%;
+      .smtitle {
+        @include smtitle();
+      }
+      .bTitle1 {
+        @include titleBlackBg();
+      }
+      .bTitle2 {
+        @include titleWhiteBg();
+      }
+      .beforeLine {
+        @include hr($colorWhite);
+        position: absolute;
+        margin-left: 51rem;
+        margin-top: -10px;
+        z-index: 200;
+      }
+      .beforeBgimg {
+        height: 100%;
+        .folderImg {
+          @include flexCenter();
+          width: 88vw;
+          margin: 40px auto;
+          position: relative;
+        }
+        .oddAppImg {
+          @include flexCenter();
+          transform: translateY(-580px);
+          width: 80vw;
+          margin: 0px auto;
+        }
+      }
+    }
+  }
+  .UXresearch {
+    .persona {
+      .smtitle {
+        @include smtitle();
+      }
+      .perTitle1 {
+        @include titleGrayBg();
+      }
+      .perTitle2 {
+        @include titleWhiteBg();
+      }
+      .perLine {
+        @include hr($colorWhite);
+        position: absolute;
+        margin-left: 41rem;
+        margin-top: -10px;
+        z-index: 200;
+      }
+      .uxtxt {
+        margin-left: 18rem;
+        margin-top: 1.8rem;
+        line-height: 2rem;
+        color: $colorWhite;
+        letter-spacing: 1px;
+      }
+      .uxImg {
+        .uxImgOne {
+          width: 80vw;
+          margin: 20px auto;
+          margin-right: 80px;
+          @include flexCenter();
+        }
+        .uxImgTwo {
+          width: 75vw;
+          margin: 20px auto;
+          margin-right: 150px;
+          @include flexCenter();
+        }
+      }
+    }
+    .journeyMap {
+      .smtitle {
+        @include smtitle();
+      }
+      .jourTitle1 {
+        @include titleGrayBg();
+      }
+      .jourTitle2 {
+        @include titleWhiteBg();
+      }
+      .jourLine {
+        @include hr($colorWhite);
+        position: absolute;
+        margin-left: 48rem;
+        margin-top: -10px;
+        z-index: 200;
+      }
+      .jourtxtOne {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 80px;
+        margin-left: 18rem;
+        color: $colorWhite;
+        letter-spacing: 1px;
+        ul {
+          display: inline;
+          text-decoration: none;
+
+          li {
+            display: inline;
+          }
+        }
+      }
+      .jourtxtTwo {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 80px;
+        margin-left: 18rem;
+        color: $colorWhite;
+        letter-spacing: 1px;
+        ul {
+          display: inline;
+          text-decoration: none;
+
+          li {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+}
