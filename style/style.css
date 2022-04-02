@@ -66,6 +66,32 @@
   }
 }
 
+@-webkit-keyframes scalePic {
+  0% {
+  }
+  50% {
+    -webkit-transform: skew(-10deg, 5deg);
+            transform: skew(-10deg, 5deg);
+    -webkit-transform: scaleY(1.1);
+            transform: scaleY(1.1);
+  }
+  100% {
+  }
+}
+
+@keyframes scalePic {
+  0% {
+  }
+  50% {
+    -webkit-transform: skew(-10deg, 5deg);
+            transform: skew(-10deg, 5deg);
+    -webkit-transform: scaleY(1.1);
+            transform: scaleY(1.1);
+  }
+  100% {
+  }
+}
+
 * {
   font-family: "Noto Sans TC", sans-serif;
   scroll-behavior: smooth;
@@ -93,7 +119,7 @@ body {
   left: 0;
   width: 100%;
   margin-top: 0 !important;
-  height: 100px;
+  height: 60px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -262,13 +288,8 @@ body {
   left: -25px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-}
-
-.container .landing-bg .landing-page .main .photo .imgTwo:hover img {
-  -webkit-transform: skew(-10deg, 5deg);
-          transform: skew(-10deg, 5deg);
-  -webkit-transform: scaleY(1.1);
-          transform: scaleY(1.1);
+  -webkit-animation: scalePic 2s infinite;
+          animation: scalePic 2s infinite;
 }
 
 .container .landing-bg .arrow {
@@ -487,7 +508,7 @@ body {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 90%;
+  width: 88%;
   margin: 40px auto;
 }
 
@@ -498,6 +519,13 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   margin: 8rem auto;
+}
+
+.container .main-bg .main-page .before .beforeBgimg:hover {
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .container .main-bg .main-page .ux-research {
@@ -535,7 +563,7 @@ body {
   display: inline;
   background-color: rgba(0, 0, 0, 0.2);
   border: solid 0.5px white;
-  color: #3756e4;
+  color: #ffffff;
   border-radius: 20px;
   padding: 6px 40px 6px 50px;
   margin-left: -30px;

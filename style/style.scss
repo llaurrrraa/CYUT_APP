@@ -60,7 +60,7 @@ $colorLightBlue: #3dfff3;
   position: relative;
 }
 
-@mixin titleWhiteBg {
+@mixin titleWhiteBg($color:$colorBlue) {
   display: inline;
   font-size: 0.9rem;
   font-weight: 700;
@@ -68,7 +68,7 @@ $colorLightBlue: #3dfff3;
   display: inline;
   background-color: rgba(0, 0, 0, 0.2);
   border: solid 0.5px white;
-  color: $colorBlue;
+  color: $color;
   border-radius: 20px;
   padding: 6px 40px 6px 50px;
   margin-left: -30px;
@@ -104,6 +104,17 @@ $colorLightBlue: #3dfff3;
   }
 }
 
+@keyframes scalePic {
+  0% {
+  }
+  50% {
+    transform: skew(-10deg, 5deg);
+    transform: scaleY(1.1);
+  }
+  100%{
+  }
+}
+
 * {
   // border: solid 1px black;
   font-family: "Noto Sans TC", sans-serif;
@@ -129,11 +140,11 @@ body {
   left: 0;
   width: 100%;
   margin-top: 0 !important;
-  height: 100px;
+  height: 60px;
   transition: 0.5s;
   &.nav {
-    background-color: rgba(0, 0, 0,0.8);
-    z-index:1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
     ul li a {
       color: #fff !important;
       &:hover {
@@ -247,12 +258,7 @@ body {
               top: 9rem;
               left: -25px;
               transition: 0.5s;
-            }
-          }
-          .imgTwo:hover {
-            img {
-              transform: skew(-10deg, 5deg);
-              transform: scaleY(1.1);
+              animation: scalePic 2s infinite;
             }
           }
         }
@@ -367,25 +373,27 @@ body {
           height: 100%;
           .folderImg {
             position: absolute;
-            // top:1rem;
             left: 50%;
             transform: translateX(-50%);
-            width: 90%;
+            width: 88%;
             margin: 40px auto;
           }
           .oddAppImg {
             position: absolute;
-            // top:10rem;
             left: 50%;
             width: 80%;
             transform: translateX(-50%);
             margin: 8rem auto;
           }
         }
+        .beforeBgimg:hover{
+          transition-duration: 1.5s;
+          transform: scale(1.2);
+        }
       }
       .ux-research {
         margin-top: 5rem;
-        width:100%;
+        width: 100%;
         .persona {
           .sm-title {
             @include sm-title();
@@ -394,7 +402,7 @@ body {
             @include titleGrayBg();
           }
           .perTitle2 {
-            @include titleWhiteBg();
+            @include titleWhiteBg($colorWhite);
           }
           .perLine {
             @include hr(700px, $colorWhite);
@@ -415,7 +423,7 @@ body {
             flex-direction: column;
             align-items: center;
             .uxImgOne {
-              width:90%;
+              width: 90%;
             }
             .uxImgTwo {
               width: 86%;
