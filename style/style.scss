@@ -60,7 +60,7 @@ $colorLightBlue: #3dfff3;
   position: relative;
 }
 
-@mixin titleWhiteBg($color:$colorBlue) {
+@mixin titleWhiteBg($color: $colorBlue) {
   display: inline;
   font-size: 0.9rem;
   font-weight: 700;
@@ -111,7 +111,7 @@ $colorLightBlue: #3dfff3;
     transform: skew(-10deg, 5deg);
     transform: scaleY(1.1);
   }
-  100%{
+  100% {
   }
 }
 
@@ -168,11 +168,11 @@ body {
   margin: 0;
   .landing-bg {
     display: flex;
+    width: 100%;
     height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
     margin-top: -3rem;
     .landing-page {
       background-color: $colorGray;
@@ -222,15 +222,13 @@ body {
         display: flex;
         position: relative;
         .title-name {
-          position: absolute;
           width: 50%;
-          top: 50px;
+          transform: translate(0, 50px);
           margin-left: 130px;
           font-size: 3rem;
           font-weight: 100;
           letter-spacing: 3px;
           line-height: 1.8;
-          position: relative;
           .content {
             display: block;
             font-size: 14px;
@@ -247,14 +245,14 @@ body {
             img {
               position: absolute;
               width: 340px;
-              top: 6rem;
-              left: 15rem;
+              transform: translate(15rem, 4rem);
             }
           }
           .imgTwo {
             img {
               position: absolute;
               width: 440px;
+              // transform: translate(-2rem, 12rem);
               top: 9rem;
               left: -25px;
               transition: 0.5s;
@@ -265,7 +263,7 @@ body {
       }
     }
     .arrow {
-      top: 50px;
+      // top: 50px;
       transform: translate(-50%, -50%);
       p {
         color: #fff;
@@ -351,7 +349,7 @@ body {
       .before {
         margin-top: 3rem;
         padding: 2rem 1rem;
-        @include whiteBgBoard(830px);
+        @include whiteBgBoard(800px);
         position: relative;
         .sm-title {
           @include sm-title();
@@ -371,23 +369,22 @@ body {
         }
         .beforeBgimg {
           height: 100%;
-          .folderImg {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 88%;
-            margin: 40px auto;
-          }
-          .oddAppImg {
-            position: absolute;
-            left: 50%;
-            width: 80%;
-            transform: translateX(-50%);
-            margin: 8rem auto;
+          display: flex;
+          justify-content: space-evenly;
+          margin-top: 3rem;
+          .oddAppImg1,
+          .oddAppImg2,
+          .oddAppImg3,
+          .oddAppImg4 {
+            height: 80%;
+            z-index: 100;
           }
         }
-        .beforeBgimg:hover{
-          transition-duration: 1.5s;
+        .oddAppImg1:hover,
+        .oddAppImg2:hover,
+        .oddAppImg3:hover,
+        .oddAppImg4:hover {
+          transition-duration: 1s;
           transform: scale(1.2);
         }
       }
@@ -398,10 +395,10 @@ body {
           .sm-title {
             @include sm-title();
           }
-          .perTitle1 {
+          .per-title1 {
             @include titleGrayBg();
           }
-          .perTitle2 {
+          .per-title2 {
             @include titleWhiteBg($colorWhite);
           }
           .perLine {
@@ -418,15 +415,16 @@ body {
             color: $colorWhite;
             letter-spacing: 1px;
           }
-          .uxImg {
+          .ux-img {
             display: flex;
             flex-direction: column;
             align-items: center;
-            .uxImgOne {
-              width: 90%;
+            .ux-img-one {
+              margin-top: 2rem;
+              width: 80%;
             }
-            .uxImgTwo {
-              width: 86%;
+            .ux-img-two {
+              width: 75%;
             }
           }
         }
@@ -435,10 +433,10 @@ body {
           .sm-title {
             @include sm-title();
           }
-          .jourTitle1 {
+          .jour-title1 {
             @include titleGrayBg();
           }
-          .jourTitle2 {
+          .jour-title2 {
             @include titleWhiteBg();
           }
           .jourLine {
@@ -448,7 +446,7 @@ body {
             margin-top: -10px;
             z-index: 200;
           }
-          .jourtxtOne {
+          .jour-txt-one {
             display: flex;
             flex-wrap: wrap;
             margin-top: 80px;
@@ -464,7 +462,7 @@ body {
               }
             }
           }
-          .jourtxtTwo {
+          .jour-txt-two {
             display: flex;
             flex-wrap: wrap;
             margin-top: 80px;
@@ -485,7 +483,192 @@ body {
     }
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 575.98px) {
+}
+
+@media (max-width: 767.98px) {
+  html,
+  body {
+    width: 100%;
+  }
   .container {
+    width: 100%;
+    .landing-bg {
+      width: 100%;
+      display: block;
+      margin: 1rem auto;
+      position: relative;
+      .landing-page {
+        width: 90%;
+        height: 70%;
+        .nav {
+          display: none;
+        }
+        .main {
+          width: 100%;
+          height: 100%;
+          flex-direction: column;
+          .title-name {
+            margin-left: 20px;
+            line-height: 1.5;
+            width: 90%;
+          }
+          .photo {
+            .imgOne {
+              img {
+                transform: translate(10rem, 4rem);
+                width: 200px;
+              }
+            }
+            .imgTwo {
+              img {
+                left: 20px;
+                top: 10rem;
+                width: 280px;
+              }
+            }
+          }
+        }
+      }
+      .arrow {
+        position: absolute;
+        height: 50px;
+        bottom: 10px;
+        top: 83%;
+        left: 46%;
+        transform: none;
+      }
+    }
+    .main-bg {
+      margin-top: 0;
+      .main-page {
+        .motivation {
+          @include whiteBgBoard(58vh);
+          display: flex;
+          flex-direction: column;
+          .sm-title {
+            display: block;
+            margin-bottom: 0.5rem;
+          }
+          .main-title {
+            margin: 0 auto;
+          }
+          .sub-title {
+            z-index: 1;
+            margin: 0 auto;
+            background-color: #fff;
+          }
+          .mo-txt {
+            flex-direction: column;
+            margin-top: 2rem;
+            ol {
+              margin: 0;
+              padding-top: 1rem;
+              li {
+                display: block;
+                margin: 10px 10px;
+              }
+            }
+          }
+        }
+        .before {
+          @include whiteBgBoard(100vh);
+          display: flex;
+          flex-direction: column;
+          .sm-title {
+            display: block;
+            margin-bottom: 0.5rem;
+          }
+          .main-title {
+            margin: 0 auto;
+          }
+          .sub-title {
+            z-index: 1;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.1);
+            letter-spacing: 0.5px;
+          }
+          .beforeBgimg {
+            display: block;
+            .oddAppImg1,
+            .oddAppImg2,
+            .oddAppImg3,
+            .oddAppImg4 {
+              height: 37%;
+              object-fit: contain;
+              &:hover {
+                transition-duration: 0.5s;
+                transform: scale(1.5);
+              }
+            }
+          }
+        }
+        .ux-research {
+          .persona {
+            display: flex;
+            flex-direction: column;
+            .sm-title {
+              display: block;
+              margin-bottom: 0.5rem;
+            }
+            .per-title1 {
+              margin: 0 auto;
+            }
+            .per-title2 {
+              margin: 0.5rem auto;
+              background-color: rgba(255, 255, 255, 0.1);
+              letter-spacing: 0.5px;
+            }
+            .uxtxt {
+              margin: 1rem 0;
+            }
+            .ux-img {
+              .ux-img-one {
+                width: 120%;
+                &:hover {
+                  transition-duration: 0.5s;
+                  transform: scale(1.5);
+                  z-index: 1;
+                }
+              }
+              .ux-img-two {
+                width: 110%;
+                &:hover {
+                  transition-duration: 0.5s;
+                  transform: scale(1.5);
+                  z-index: 1;
+                }
+              }
+            }
+          }
+        }
+        .journey-map {
+          display: flex;
+          flex-direction: column;
+          .sm-title {
+            display: block;
+            margin-bottom: 0.5rem;
+          }
+          .jour-title1 {
+            margin: 0 auto !important;
+          }
+          .jour-title2 {
+            margin-top: 1rem !important;
+            color:#fff !important;
+          }
+          .jour-txt-one, .jour-txt-two{
+            margin: 1rem 0 !important;
+            ul{
+              padding: 0;
+            }
+            ul li{
+              background-color: rgba(0,0,0,0.2);
+              padding:5px;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
   }
 }
