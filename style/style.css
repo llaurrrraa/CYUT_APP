@@ -730,6 +730,13 @@ body {
   left: 0;
 }
 
+.container .footer a {
+  color: #3dfff3;
+  margin: 0 auto;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
 .container .footer ul {
   margin: 2rem 0;
   padding: 0;
