@@ -190,9 +190,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -225,7 +225,7 @@ body {
   letter-spacing: 3px;
   margin: 0 8px;
   padding: 0 10px;
-  font-size: 15px;
+  font-size: 1.1rem;
   font-weight: 700;
 }
 
@@ -262,7 +262,7 @@ body {
 
 .container .landing-bg .landing-page .main .title-name .content {
   display: block;
-  font-size: 14px;
+  font-size: 1rem;
   margin-top: 2rem;
   letter-spacing: 2px;
   color: #3756e4;
